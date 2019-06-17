@@ -4,6 +4,14 @@
 
 DB設計
 
+# users table
+|Columm|Type|user|
+| :------------- | :------------- |:------------- |
+|id|string|null: false, foreign_key: true|
+
+### Association
+-has_many :chats
+
 # members table
 
 |Columm|Type|Options|
@@ -13,20 +21,15 @@ DB設計
 
 ### Association
 - belongs_to :users_table
+- has_many :users
 
-# chat table
-|Columm|Type|time|Type|articles|
+# chats table
+|Columm|Type|Options|
 | :------------- | :------------- |:------------- |
-|chat_id|integer|time|string|articles|integer|user_id|
+|chat|text|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user_id
+- belongs_to :users
 
 
-# users table
-|Columm|Type|email|password|chat_id|
-| :------------- | :------------- |:------------- |
-|id|string|email|string|password|integer|chat_id|
 
-### Association
--belongs_to :chat table
