@@ -14,11 +14,11 @@ DB設計
 
 
 ### Association
-- has_many :chats
-- has_many :groups
+- has_many :chats, through: :users_groups
+- has_many :groups, through: :users_groups
 - belongs_to :member
 
-# members table
+# messages table
 
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
@@ -27,10 +27,10 @@ DB設計
 
 ### Association
 - belongs_to :user
-- has_many :groups
 
 
-# chats table
+
+# users_groups table
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
 |chat|text|null: false, foreign_key: true|
@@ -45,8 +45,8 @@ DB設計
 # groups table
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
-|group_id|integer|null: false, foreign_key: true|
+|name|string|index: true,null: false, unique: true|
 
 ### Association
-- has_many :users
+- has_many :users, through: :users_groups
 - has_many :members
