@@ -7,7 +7,8 @@ DB設計
 # users table
 |Columm|Type|Options|Columm|Type|Options|
 | :------------- | :------------- |:------------- | :------------- | :------------- |:------------- |
-|id|string|null: false, foreign_key: true|name|string|index: true,null: false, unique: true|
+|id|string|null: false, foreign_key: true|
+|name|string|index: true,null: false, unique: true|
 
 
 
@@ -30,7 +31,8 @@ DB設計
 # chats table
 |Columm|Type|Options|Columm|Type|Options|
 | :------------- | :------------- |:------------- | :------------- | :------------- |:------------- |
-|chat|text|null: false, foreign_key: true|image|string|null: true, foreign_key: false|
+|chat|text|null: false, foreign_key: true|
+|image|string|null: true, foreign_key: false|
 
 
 
