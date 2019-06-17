@@ -11,7 +11,7 @@ DB設計
 |user_id|integer|null: false, foreign_key: true|
 
 
-###Association
+### Association
 - belongs_to :users_table
 
 # chat table
@@ -19,7 +19,7 @@ DB設計
 | :------------- | :------------- |:------------- |
 |chat_id|integer|time|string|articles|integer|user_id|
 
-###Association
+### Association
 - belongs_to :user_id
 
 
@@ -28,5 +28,5 @@ DB設計
 | :------------- | :------------- |:------------- |
 |id|string|email|string|password|integer|chat_id|
 
-###Association
+### Association
 -belongs_to :chat table
