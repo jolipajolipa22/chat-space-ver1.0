@@ -16,6 +16,7 @@ DB設計
 ### Association
 - has_many :chats
 - has_many :groups
+- belongs_to :member
 
 # members table
 
@@ -26,6 +27,7 @@ DB設計
 
 ### Association
 - belongs_to :user
+- has_many :groups
 
 
 # chats table
@@ -38,6 +40,7 @@ DB設計
 
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 # groups table
 |Columm|Type|Options|
@@ -46,3 +49,4 @@ DB設計
 
 ### Association
 - has_many :users
+- has_many :members
