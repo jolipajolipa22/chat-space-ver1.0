@@ -5,8 +5,9 @@
 DB設計
 
 # users table
-|Columm|Type|user|
-| :------------- | :------------- |:------------- |s
+|Columm|Type|user|Columm|Type|user|
+|Columm|Type|user|Columm|Type|user|
+ :------------- | :------------- |:------------- | :------------- | :------------- |:------------- |
 |id|string|null: false, foreign_key: true|name|string|index: true,null: false, unique: true|
 | :------------- | :------------- |:------------- | :------------- | :------------- |:------------- |
 
@@ -28,8 +29,8 @@ DB設計
 - has_many :users
 
 # chats table
-|Columm|Type|Options|
-| :------------- | :------------- |:------------- |
+|Columm|Type|Options|Columm|Type|Options|
+| :------------- | :------------- |:------------- | :------------- | :------------- |:------------- |
 |chat|text|null: false, foreign_key: true|image|string|null: true, foreign_key: false|
 | :------------- | :------------- |:------------- | :------------- | :------------- |:------------- |
 
