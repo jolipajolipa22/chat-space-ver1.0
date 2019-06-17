@@ -26,20 +26,20 @@ Things you may want to cover:
 DB設計
 
 #＃ members table
-id
-|Columm|Type|Options|
-|————|——-|————|
-|user_id|integer|null: false, foreign_key: true|
+-ユーザーid
+-|Columm|Type|Options|
+-|————|——-|————|
+-|user_id|integer|null: false, foreign_key: true|
 
 
 ###Association
 - belongs_to :users_table
 
 # chat table
-本文、時間、ユーザーid
-|Columm|Type|time|Type|articles|
-|――――|――-|――――|―――|――――|
-|chat_id|integer|time|string|articles|integer|user_id|
+-本文、時間、ユーザーid
+-|Columm|Type|time|Type|articles|
+-|――――|――-|――――|―――|――――|
+-|chat_id|integer|time|string|articles|integer|user_id|
 
 ###Association
 - belongs_to :user_id
