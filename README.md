@@ -22,8 +22,8 @@ DB設計
 
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
-|user|references|foreign_key: true|
-|group|references|foreign_key: true|
+|user|references|foreign_key: true,null: false|
+|group|references|foreign_key: true,null: false|
 |comment|text| |
 |image|string| |
 ### Association
@@ -35,8 +35,8 @@ DB設計
 # users_groups table
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
-|user|references|foreign_key: true|
-|group|refences|foreign_key: true|
+|user|references|foreign_key: true,null: false|
+|group|references|foreign_key: true,null: false|
 
 
 
@@ -51,5 +51,4 @@ DB設計
 
 ### Association
 - has_many :users, through: :users_groups
-- has_many :members
 - has_many :messages
