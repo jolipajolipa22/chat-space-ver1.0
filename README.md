@@ -23,16 +23,18 @@ DB設計
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
 |user_id|integer|null: false, foreign_key: true|
-
-
+|group_id|integer|null: false, foreign_key: true|
+|comment|text|null: true, foreign_key: false|
 ### Association
-- belongs_to :user
+- belongs_to :user, through: :users_groups
 
 
 
 # users_groups table
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 |chat|text|null: false, foreign_key: true|
 |image|string|null: true, foreign_key: false|
 
