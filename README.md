@@ -16,7 +16,7 @@ DB設計
 ### Association
 - has_many :chats, through: :users_groups
 - has_many :groups, through: :users_groups
-- belongs_to :member
+- has_many :member
 
 # messages table
 
