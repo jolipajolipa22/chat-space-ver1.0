@@ -14,29 +14,29 @@ DB設計
 
 
 ### Association
-- has_many :chats, through: :users_groups
+- has_many :messages
 - has_many :groups, through: :users_groups
-- has_many :member
+- has_many :users_groups
 
 # messages table
 
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|comment|text|null: true, foreign_key: false|
+|user|references|foreign_key: true|
+|group|references|foreign_key: true|
+|comment|text| |
+|image|string| |
 ### Association
-- belongs_to :user, through: :users_groups
+- belongs_to :user
+- belongs_to :group
 
 
 
 # users_groups table
 |Columm|Type|Options|
 | :------------- | :------------- |:------------- |
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|chat|text|null: false, foreign_key: true|
-|image|string|null: true, foreign_key: false|
+|user|references|foreign_key: true|
+|group|refences|foreign_key: true|
 
 
 
@@ -52,3 +52,4 @@ DB設計
 ### Association
 - has_many :users, through: :users_groups
 - has_many :members
+- has_many :messages
