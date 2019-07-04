@@ -20,5 +20,4 @@ CarrierWave
 
 public/uploads/*
 
-.DS_Store
-excludesfile = /sakamotohideyuki7/chat-space/.gitignore
+
