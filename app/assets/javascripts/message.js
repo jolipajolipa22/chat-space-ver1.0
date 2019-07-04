@@ -1,5 +1,16 @@
 function buildHTML(message){
-  var val = `<div class="message" data-message-id=${message.id}>
+  // if ( message.image ) {
+  //   var image = `<asset_path src=${message.image} >`
+  //    return html;
+  // } else {
+  //   var image = ``
+     
+  //    return html;
+  // };
+
+  var image = message.image ? `<asset_path src=${message.image} >` : ``;
+  
+  var html = `<div class="message" data-message-id=${message.id}>
   <div class="upper-message">
     <div class="upper-message__user-name">
       ${message.user_name}
@@ -13,18 +24,10 @@ function buildHTML(message){
       ${message.content}
     </p>
   </div>
-  <asset_path src=${message.image} >
+  ${image}
 </div>`
 
-  if ( message.image ) {
-    var html =
-     val
-     return html;
-  } else {
-    var html =
-     val
-     return html;
-  };
+return html; 
 }
 $('.js-form').on('submit', function(){
 e.preventDefault();
