@@ -26,8 +26,7 @@ function buildHTML(message){
                         ${message.content}
                       </p>
                     </div>
-
-                ${image}
+                  ${image}
                 </div>`
 
 　 return html; 
