@@ -1,5 +1,14 @@
 $(function(){
 function buildHTML(message){
+  // if ( message.image ) {
+  //   var image = `<asset_path src=${message.image} >`
+  //    return html;
+  // } else {
+  //   var image = ``
+     
+  //    return html;
+  // };
+
   var image = message.image ? `<asset_path src=${message.image} >` : ``;
   
   var html = `<div class="message" data-message-id=${message.id}>
@@ -47,7 +56,7 @@ e.preventDefault();
         .fail(function(){
           alert('error');
         })
-  return false;
-  })
+        return false;
+        })
 });
 
