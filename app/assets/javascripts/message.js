@@ -18,6 +18,7 @@ $(function () {
         return html;
   }
 
+
     $('#new_message').on('submit', function (e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -69,8 +70,7 @@ $(function () {
       })
       .fail(function () {
         alert('自動更新に失敗しました');
-      });
-      
+      }); 
     }
    };
     setInterval(reloadMessages, 5000);
