@@ -10,7 +10,7 @@ $(function() {
     search_list.append(html);
   }
  
-  //「追加」ボタン html作る
+  
   function appendNewUser(id, name){
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${id} data-id=${id} '>
                   <input name='group[user_ids][]' type='hidden' value='${id}'>
@@ -39,7 +39,7 @@ $(function() {
     })
 　  
     .done(function(users){
-      //  console.log(users);
+      
        $(".chat-group-form__input").empty();
       if(users.length !== 0){
         users.forEach(function(user){
@@ -55,7 +55,7 @@ $(function() {
     })
   });
 
-  //メンバー追加ボタン
+  
   $(".user-search-result").on("click",".chat-group-user__btn--add", function() {
     var id = $(this).attr("data-user-id");
     var name = $(this).attr("data-user-name");
@@ -63,7 +63,7 @@ $(function() {
     $('.chat-group-users').append(addNewUser);
     $(this).parent('.chat-group-user').remove();
   });
-  //メンバー削除ボタン
+  
   $(".chat-group-users").on("click",".user-search-remove", function() {
   $(this).parent().remove();
   });
