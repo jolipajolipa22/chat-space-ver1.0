@@ -34,12 +34,13 @@ $(function () {
     })
       .done(function (data) {
         
-        var html = buildHTML(data);
+      var html = buildHTML(data);
       $('.messages').append(html)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fasts')
       $('.submit').prop("disabled", false)
-      $('#message_content').val("");
-      $('#message_image').val("");
+      // $('#message_content').val("");
+      // $('#message_image').val("");
+      $('#new_message.new_message')[0].reset
       })
       .fail(function () {
         alert('error');
@@ -48,7 +49,7 @@ $(function () {
         $(".form__submit").removeAttr("disabled");
         });
   });
-
+  
   
   var reloadMessages = function () {
   if (window.location.href.match(/\/groups\/\d+\/messages/)) {
@@ -74,5 +75,8 @@ $(function () {
     }
    };
     setInterval(reloadMessages, 5000);
+  //  } else {
+  // clearInterval(repeat);
+
 
 });
