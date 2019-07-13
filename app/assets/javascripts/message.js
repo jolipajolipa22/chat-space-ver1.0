@@ -38,8 +38,6 @@ $(function () {
       $('.messages').append(html)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fasts')
       $('.submit').prop("disabled", false)
-      // $('#message_content').val("");
-      // $('#message_image').val("");
       $('#new_message.new_message')[0].reset
       })
       .fail(function () {
@@ -75,8 +73,4 @@ $(function () {
     }
    };
     setInterval(reloadMessages, 5000);
-  //  } else {
-  // clearInterval(repeat);
-
-
 });
